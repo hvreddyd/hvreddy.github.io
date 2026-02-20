@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Coming Soon | hvreddy.eu</title>
+  <title>Reach Out | hvreddy.eu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root {
@@ -83,13 +83,12 @@
       background: var(--bg-alt);
       border-radius: var(--radius);
       border: 1px solid var(--border-soft);
-      padding: 32px 20px 26px;
-      text-align: center;
+      padding: 22px 20px 20px;
     }
 
     h1 {
-      margin: 0 0 8px;
-      font-size: clamp(2rem, 2.1vw + 1.5rem, 2.3rem);
+      margin: 0 0 6px;
+      font-size: clamp(1.9rem, 2vw + 1.3rem, 2.2rem);
     }
 
     p {
@@ -100,6 +99,33 @@
 
     .muted {
       color: var(--muted);
+    }
+
+    .contact-block {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: 10px;
+      border: 1px solid var(--border-soft);
+      background: #f9fafb;
+    }
+
+    .label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .email-link {
+      font-size: 1rem;
+      color: var(--accent);
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    .email-link:hover {
+      text-decoration: underline;
     }
 
     footer {
@@ -117,20 +143,25 @@
       <div class="site-title">hvreddy.eu</div>
       <nav>
         <a href="index.html">About</a>
-        <a href="reach-out.html">Reach out</a>
-        <a href="coming-soon.html" class="active">Coming soon</a>
+        <a href="reach-out.html" class="active">Reach out</a>
+        <a href="coming-soon.html">Coming soon</a>
       </nav>
     </header>
 
     <main>
-      <h1>Coming soon</h1>
+      <h1>Reach out</h1>
       <p>
-        I’ll use this space to share selected projects, case studies and notes on
-        data, service excellence and building analytics in real organisations.
+        I’m always happy to connect about data, analytics, supply chain, service operations or
+        opportunities where better metrics and insight can improve how teams work.
       </p>
       <p class="muted">
-        For now, feel free to reach out if you’d like to connect or discuss potential work.
+        The simplest way to get in touch is by email. I usually reply within a couple of days.
       </p>
+
+      <div class="contact-block">
+        <div class="label">Email</div>
+        <a class="email-link" href="mailto:hvreddy.d@gmail.com">hvreddy.d@gmail.com</a>
+      </div>
     </main>
 
     <footer>
