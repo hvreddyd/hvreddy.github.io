@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Harsha V Reddy – About | hvreddy.eu</title>
+  <title>Harsha V Reddy – CV | hvreddy.eu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root {
@@ -27,7 +27,7 @@
     }
 
     .page {
-      max-width: 920px;
+      max-width: 960px;
       margin: 0 auto;
       padding: 24px 16px 40px;
     }
@@ -79,10 +79,79 @@
       }
     }
 
+    /* CV layout */
+
+    .cv-header {
+      background: var(--bg-alt);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius);
+      padding: 18px 20px 16px;
+      margin-bottom: 18px;
+    }
+
+    .cv-header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.1rem, 2.3vw + 1.4rem, 2.5rem);
+    }
+
+    .role-line {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .contact-line {
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: right;
+    }
+
+    .contact-line a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact-line a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 700px) {
+      .cv-header-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .contact-line {
+        text-align: left;
+      }
+    }
+
+    .tag-row {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      font-size: 0.8rem;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: #f3f4f6;
+      border: 1px solid #e5e7eb;
+      color: var(--muted);
+    }
+
     main {
       display: grid;
       grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.3fr);
-      gap: 20px;
+      gap: 18px;
     }
 
     @media (max-width: 860px) {
@@ -91,109 +160,66 @@
       }
     }
 
-    .card {
+    .section {
       background: var(--bg-alt);
       border-radius: var(--radius);
       border: 1px solid var(--border-soft);
-      padding: 20px 20px 18px;
-    }
-
-    h1 {
-      margin: 0 0 4px;
-      font-size: clamp(2rem, 2.2vw + 1.4rem, 2.4rem);
-    }
-
-    .subtitle {
-      margin: 0 0 14px;
-      font-size: 0.98rem;
-      color: var(--muted);
-    }
-
-    .meta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
+      padding: 18px 20px 16px;
       margin-bottom: 14px;
     }
 
-    .meta-pill {
-      font-size: 0.8rem;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: #f3f4f6;
-      border: 1px solid #e5e7eb;
-      color: var(--muted);
-    }
-
-    .meta-pill strong {
-      color: var(--fg);
-    }
-
-    p {
-      margin: 0 0 10px;
-      font-size: 0.95rem;
-      line-height: 1.7;
-      color: #111827;
-    }
-
-    .muted {
-      color: var(--muted);
-    }
-
-    .columns {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 16px;
-      border-top: 1px solid var(--border);
-      padding-top: 14px;
-    }
-
-    @media (max-width: 860px) {
-      .columns {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .col-label {
-      font-size: 0.78rem;
+    .section-title {
+      margin: 0 0 8px;
+      font-size: 1rem;
       text-transform: uppercase;
       letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    .section h3 {
+      margin: 10px 0 2px;
+      font-size: 0.98rem;
+    }
+
+    .section .meta {
+      font-size: 0.82rem;
       color: var(--muted);
       margin-bottom: 4px;
     }
 
-    .col-value {
+    .section p {
+      margin: 4px 0 6px;
       font-size: 0.9rem;
+      line-height: 1.6;
     }
 
-    .side-card + .side-card {
-      margin-top: 12px;
+    ul {
+      margin: 4px 0 6px 1.1rem;
+      padding: 0;
+      font-size: 0.9rem;
+      color: var(--fg);
     }
 
-    .side-title {
-      margin: 0 0 4px;
-      font-size: 1.02rem;
-    }
+    li { margin-bottom: 4px; }
 
-    .chip-row {
+    .pill-list {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
-      margin-top: 12px;
+      margin-top: 10px;
     }
 
-    .chip {
-      font-size: 0.78rem;
+    .pill {
+      font-size: 0.8rem;
       padding: 3px 8px;
       border-radius: 999px;
-      border: 1px solid var(--border-soft);
       background: #f9fafb;
+      border: 1px solid var(--border-soft);
       color: var(--muted);
     }
 
     footer {
-      margin-top: 26px;
+      margin-top: 24px;
       font-size: 0.8rem;
       color: var(--muted);
       border-top: 1px solid var(--border);
@@ -212,82 +238,145 @@
       </nav>
     </header>
 
+    <!-- CV header -->
+    <section class="cv-header">
+      <div class="cv-header-top">
+        <div>
+          <h1>Harsha V Reddy</h1>
+          <div class="role-line">
+            Data &amp; Analytics · Supply Chain · Global Service Excellence
+          </div>
+        </div>
+        <div class="contact-line">
+          Copenhagen, Denmark<br />
+          <a href="mailto:hvreddy.d@gmail.com">hvreddy.d@gmail.com</a><br />
+          hvreddy.eu
+        </div>
+      </div>
+      <div class="tag-row">
+        <span class="tag">End‑to‑end data solutions</span>
+        <span class="tag">Service &amp; supply chain analytics</span>
+        <span class="tag">Global KPIs &amp; utilisation programs</span>
+        <span class="tag">Stakeholder‑driven delivery</span>
+      </div>
+    </section>
+
     <main>
-      <section class="card">
-        <h1>Harsha V Reddy</h1>
-        <p class="subtitle">
-          Data &amp; Analytics · Supply Chain · Global Service Excellence
-        </p>
-
-        <div class="meta-row">
-          <div class="meta-pill"><strong>Location</strong>&nbsp;· Copenhagen, Denmark</div>
-          <div class="meta-pill"><strong>Focus</strong>&nbsp;· End‑to‑end data solutions &amp; KPIs</div>
-          <div class="meta-pill"><strong>Industry</strong>&nbsp;· Medical devices &amp; retail</div>
-        </div>
-
-        <p>
-          I work at the intersection of data, operations and technology – designing back‑end data
-          solutions and front‑end reporting that turn complex global operations into simple,
-          decision‑ready insight.
-        </p>
-        <p>
-          Over the last decade I’ve led initiatives across service, supply chain, sales and finance:
-          from global KPIs and utilisation programs at GN, to data‑driven transformation and ERP
-          rollouts at IKEA. I enjoy partnering with stakeholders, challenging how things are measured
-          today, and building practical analytics that people actually use.
-        </p>
-
-        <div class="columns">
-          <div>
-            <div class="col-label">Current role</div>
-            <div class="col-value">
-              Global Service Excellence &amp; Data<br />
-              GN ReSound India / GN Group
-            </div>
-          </div>
-          <div>
-            <div class="col-label">Previous</div>
-            <div class="col-value">
-              IKEA – Logistics, Sourcing &amp;<br />
-              Analytics, Copenhagen
-            </div>
-          </div>
-          <div>
-            <div class="col-label">Working style</div>
-            <div class="col-value">
-              Outcome‑driven, collaborative and hands‑on – comfortable spanning data, process and people.
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <aside>
-        <div class="card side-card">
-          <h2 class="side-title">What I’m good at</h2>
-          <p class="muted">
-            Building end‑to‑end data flows: from ingestion and modelling to visualisation and adoption –
-            especially when the underlying process is messy or cross‑regional.
+      <!-- LEFT COLUMN -->
+      <div>
+        <!-- Summary -->
+        <section class="section">
+          <h2 class="section-title">Summary</h2>
+          <p>
+            I design and deliver end‑to‑end data solutions – from ingestion and modelling through
+            to KPIs and dashboards – with a focus on service, supply chain, sales and finance.
           </p>
-          <div class="chip-row">
-            <span class="chip">Microsoft Fabric · Azure</span>
-            <span class="chip">Power BI · Power Query</span>
-            <span class="chip">SQL (T‑SQL, SSIS, SSAS)</span>
-            <span class="chip">Databricks</span>
-            <span class="chip">Dynamics 365 · Navision</span>
-            <span class="chip">Supply chain &amp; service analytics</span>
-          </div>
-        </div>
-
-        <div class="card side-card">
-          <h2 class="side-title">Recent work</h2>
-          <p class="muted">
-            • Global service excellence KPIs and reporting across APAC, EMEA and NA.<br />
-            • “G Part utilisation” program, aligning data, process and behaviour across regions.<br />
-            • At IKEA, led a data literacy and ERP initiative – improving a key data quality metric
-            from 40% to 89%.
+          <p>
+            I enjoy working close to the business, challenging how performance is measured today,
+            and building analytics that fit how teams actually work, not the other way around.
           </p>
-        </div>
-      </aside>
+        </section>
+
+        <!-- Experience -->
+        <section class="section">
+          <h2 class="section-title">Experience</h2>
+
+          <h3>Global Service Excellence &amp; Data – GN ReSound India / GN Group</h3>
+          <div class="meta">GN Store Nord · Service excellence &amp; analytics · Global (APAC · EMEA · NA)</div>
+          <ul>
+            <li>Designing and maintaining global service KPIs and reporting for regional and central stakeholders.</li>
+            <li>Building back‑end data models and front‑end Power BI dashboards in Microsoft Fabric / Azure.</li>
+            <li>Leading the “G Part utilisation” initiative across regions, aligning data, process and behaviour.</li>
+          </ul>
+
+          <h3>Logistics, Sourcing &amp; Analytics – IKEA, Copenhagen</h3>
+          <div class="meta">IKEA · Logistics Operations Leader · Strategic Sourcing Analyst · Strategic Project Leader</div>
+          <ul>
+            <li>Led a data literacy and ERP transformation program across functions, improving a key
+                data quality metric from 40% to 89%.</li>
+            <li>Developed reporting and decision support in Power BI, MS SQL and GCP to support sourcing
+                and logistics decisions.</li>
+            <li>Worked with SAP S/4HANA (VIM, MDG, BOT) to embed better data and process standards.</li>
+          </ul>
+
+          <h3>Global Strategic Consultant – Placewell HRD Consultants</h3>
+          <div class="meta">International business development · Cross‑functional project work</div>
+          <ul>
+            <li>Drove international business growth and partnerships, contributing to ~40% revenue increase.</li>
+            <li>Used data‑driven analysis and forecasting to support commercial decisions and project planning.</li>
+          </ul>
+        </section>
+
+        <!-- Selected Projects -->
+        <section class="section">
+          <h2 class="section-title">Selected projects</h2>
+
+          <h3>Global service excellence KPIs</h3>
+          <p>
+            Established a consistent KPI framework and reporting layer across APAC, EMEA and NA,
+            connecting back‑end data pipelines to clear, role‑specific dashboards.
+          </p>
+
+          <h3>G Part utilisation program</h3>
+          <p>
+            Led the global program to improve transparency and utilisation of G Parts, combining data,
+            process mapping and stakeholder alignment to support better planning and cost control.
+          </p>
+
+          <h3>IKEA data literacy &amp; ERP transformation</h3>
+          <p>
+            Designed and drove an initiative to improve data literacy and readiness during ERP rollout,
+            lifting a key data quality metric from 40% to 89% and embedding new ways of working with data.
+          </p>
+        </section>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div>
+        <!-- Skills -->
+        <section class="section">
+          <h2 class="section-title">Skills</h2>
+          <ul>
+            <li>End‑to‑end data solution design (ingestion → modelling → visualisation).</li>
+            <li>Service, supply chain and returns analytics.</li>
+            <li>KPI design, operational reporting and executive dashboards.</li>
+            <li>Stakeholder management across regions and functions.</li>
+            <li>Project leadership and change management in data/ERP initiatives.</li>
+          </ul>
+        </section>
+
+        <!-- Tools & tech -->
+        <section class="section">
+          <h2 class="section-title">Tools &amp; technology</h2>
+          <div class="pill-list">
+            <span class="pill">Microsoft Fabric</span>
+            <span class="pill">Azure</span>
+            <span class="pill">Power BI</span>
+            <span class="pill">Power Query (M)</span>
+            <span class="pill">SQL · T‑SQL</span>
+            <span class="pill">SSIS · SSAS</span>
+            <span class="pill">Databricks</span>
+            <span class="pill">Dynamics 365</span>
+            <span class="pill">Navision</span>
+            <span class="pill">SAP S/4HANA (VIM, MDG, BOT)</span>
+            <span class="pill">Python (analysis &amp; scripting)</span>
+            <span class="pill">Power Platform</span>
+          </div>
+        </section>
+
+        <!-- Education / other -->
+        <section class="section">
+          <h2 class="section-title">Education &amp; other</h2>
+          <p>
+            You can adjust this section with your actual education details – university, degrees and
+            any key certifications that matter for the roles you’re targeting.
+          </p>
+          <p>
+            Volunteer experience (e.g. AIESEC, Global Citizen project, multicultural activities) can
+            also be added here if you’d like it visible on the first page.
+          </p>
+        </section>
+      </div>
     </main>
 
     <footer>
